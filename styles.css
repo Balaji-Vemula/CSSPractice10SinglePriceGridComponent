@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Playwrite+PE:wght@100..400&display=swap');
+
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright-Yellow: hsl(71, 73%, 54%);
+
+  /* ### Neutral */
+
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+
+  /* Font styles */
+
+  
+  --fs-heading-1: 2rem;
+  --fs-heading-2: 1.25rem;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font: inherit;
+  font-family: "Karla", sans-serif;
+  line-height: 25px;
+
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p{
+  color: var(--Grayish-Blue);
+  font-size: 1rem;
+  font-weight: var(--fw-400);
+}
+.price-desc, .price, li{
+  color: var(--Light-Gray);
+  font-size: 1rem;
+  font-weight: var(--fw-400);
+}
+
+body {
+  background-color: var(--Light-Gray);
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  border-radius: .5rem;
+  overflow: hidden;
+  max-width: 42em;
+}
+
+/* Row 1: Full width */
+.row1 {
+  background-color: white;
+  padding: 3rem 2.5rem;
+}
+
+.title-heanding-1 {
+  margin-bottom: 1.5rem;
+}
+.title-heading-2 {
+  margin: .75rem 0;
+}
+
+/* Row 2: Two columns */
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.column {
+  padding: 3rem;
+}
+ol {
+  padding: 0;
+  margin: 0;
+}
+li {
+  line-height: 20px;
+}
+li::marker {
+  content: "";
+}
+
+.price-card {
+  background-color: var(--Cyan);
+}
+
+.about {
+  background-color: hsla(179, 62%, 43%, 0.75);
+}
+
+.title-heanding-1 {
+  font-size: var(--fs-heading-1);
+  color: var(--Cyan);
+  font-weight: var(--fw-700);
+}
+
+.heading {
+  font-size: var(--fs-heading-2);
+  color: white;
+  font-weight: var(--fw-700);
+}
+
+.title-heading-2 {
+  color: var(--Bright-Yellow);
+}
+
+.price span {
+  padding-right: .5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  vertical-align: middle;
+  color: white;
+}
+
+.flex-1 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+.flex-2 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.flex-sm {
+  display: flex;
+  flex-direction: column;
+  row-gap: .75rem;
+}
+
+button {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  background-color: var(--Bright-Yellow);
+  border: 0;
+  border-radius: .5rem;
+  color: var(--Light-Gray);
+  font-weight: var(--fw-700);
+}
+
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-rows: auto auto auto; /* Each section will stack vertically */
+    margin: 4rem 2rem;
+  }
+  
+  .row2 {
+    grid-template-columns: 1fr; /* Single column layout */
+  }
+
+  .column {
+    padding: 2rem 1.5rem; /* Adjust padding for mobile view if needed */
+  }
+  .help{
+    display: none;
+  }
+}
